@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TravelBookingApp</string>
+    <string name="stringIntro">Исследуйте<font color='#3f95ec'>\n Мир</font> с нами </string>
+    <string name="subIntro">Организовано при поддержке ООО" АгроФутТрейд"</string>
 </resources>
