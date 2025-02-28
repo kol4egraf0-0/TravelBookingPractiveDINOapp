@@ -18,7 +18,7 @@ public class IntroActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityIntroBinding.inflate(getLayoutInflater());
-        setContentView(R.layout.activity_intro);
+        setContentView(binding.getRoot());
 
         binding.introBtn.setOnClickListener(v -> startActivity(new Intent(IntroActivity.this, MainActivity.class)));
     }
