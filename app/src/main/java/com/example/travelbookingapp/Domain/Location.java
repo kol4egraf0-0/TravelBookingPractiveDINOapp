@@ -4,7 +4,6 @@ public class Location {
 private int Id;
 private String Loc;
     public Location(){
-
     }
 
     public int getId() {
@@ -21,5 +20,9 @@ private String Loc;
 
     public void setLoc(String loc) {
         Loc = loc;
+    }
+    @Override
+    public String toString() {
+        return Loc;
     }
 }
