@@ -3,6 +3,8 @@ package com.example.travelbookingapp.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.travelbookingapp.databinding.ActivityIntroBinding;
+
 public class IntroActivity extends BaseActivity {
     ActivityIntroBinding binding;
     @Override
