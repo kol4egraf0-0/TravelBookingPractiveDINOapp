@@ -8,13 +8,14 @@
     tools:context=".Activity.DetailActivity">
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -31,14 +32,14 @@
                         android:id="@+id/imageView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        android:scaleType="centerCrop"
                         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
                     <ImageView
-                        android:id="@+id/imageView7"
+                        android:id="@+id/backBtn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="24dp"
@@ -48,13 +49,13 @@
                         app:srcCompat="@drawable/back" />
 
                     <ImageView
-                        android:id="@+id/imageView8"
+                        android:id="@+id/favoriteBtn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="24dp"
-                        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                        app:layout_constraintBottom_toBottomOf="@+id/backBtn"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/imageView7"
+                        app:layout_constraintTop_toTopOf="@+id/backBtn"
                         app:srcCompat="@drawable/fav_icon" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -73,14 +74,14 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/textView3"
+                            android:id="@+id/titleTxt"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="title"
                             android:textAlignment="center"
-                            android:textSize="24sp"
                             android:textColor="@color/darkBlue"
-                            android:textStyle="bold"/>
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -97,15 +98,15 @@
                                 app:srcCompat="@drawable/location" />
 
                             <TextView
-                                android:id="@+id/textView8"
+                                android:id="@+id/addressTxt"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:textSize="16sp"
-                                android:textColor="@color/darkBlue"
                                 android:layout_marginStart="8dp"
+                                android:layout_weight="1"
+                                android:text="address"
+                                android:textColor="@color/darkBlue"
 
-                                android:text="TextView" />
+                                android:textSize="16sp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -118,34 +119,35 @@
 
                             <RatingBar
                                 android:id="@+id/ratingBar"
+                                style="@android:style/Widget.DeviceDefault.RatingBar.Indicator"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:indeterminate="false"
                                 android:isIndicator="true"
                                 android:numStars="5"
+                                android:progressTint="#ffc106"
                                 android:rating="3"
                                 android:scaleX="0.7"
                                 android:scaleY="0.7"
                                 android:stepSize="1"
-                                android:transformPivotX="0dp"
-                                android:indeterminate="false"
-                                android:progressTint="#ffc106"
-                                style="@android:style/Widget.DeviceDefault.RatingBar.Indicator"/>
+                                android:transformPivotX="0dp" />
 
                             <TextView
-                                android:id="@+id/textView10"
+                                android:id="@+id/ratingTxt"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="0"
-                                android:textSize="16sp"/>
+                                android:layout_gravity="center_vertical"
+                                android:textSize="16sp" />
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="80dp"
-                            android:background="@drawable/grey_corner_background"
                             android:layout_marginStart="24dp"
                             android:layout_marginEnd="24dp"
+                            android:background="@drawable/grey_corner_background"
                             android:orientation="horizontal">
 
                             <androidx.constraintlayout.widget.ConstraintLayout
@@ -279,9 +281,77 @@
                                     app:layout_constraintTop_toBottomOf="@+id/bedTxt" />
                             </androidx.constraintlayout.widget.ConstraintLayout>
                         </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/textView13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="16dp"
+                            android:text="Description"
+                            android:textColor="@color/darkBlue"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/descritionTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="24dp"
+                            android:text="KEKW POG LOL KEKW POG LOL KEKW POG LOL KEKW POG LOL KEKW POG LOL KEKW POG LOL KEKW POG LOL KEKW POG LOL KEKW POG LOL KEKW POG LOL KEKW POG LOL KEKW POG LOL KEKW POG LOL KEKW POG LOL KEKW POG LOL KEKW POG LOL KEKW POG LOL KEKW POG LOL KEKW POG LOL KEKW POG LOL KEKW POG LOL "
+                            android:textColor="@color/darkBlue" />
                     </LinearLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/lightGray"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addToCartBtn"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            style="@android:style/Widget.Button"
+            android:background="@drawable/blue_bg_search"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:text="Добавить в корзину"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/priceTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="0₽"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/Турист"
+            android:textColor="@color/darkBlue"
+
+            app:layout_constraintBottom_toBottomOf="@+id/priceTxt"
+            app:layout_constraintStart_toEndOf="@+id/priceTxt"
+            app:layout_constraintTop_toTopOf="@+id/priceTxt" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
