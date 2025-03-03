@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Activity.DetailActivity">
 
     <ScrollView
@@ -15,6 +16,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingBottom="50dp"
             android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -29,7 +31,7 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
-                        android:id="@+id/imageView2"
+                        android:id="@+id/pic"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:scaleType="centerCrop"
@@ -61,7 +63,7 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="500dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="350dp"
                     android:background="@drawable/top_constraint_background"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -71,7 +73,10 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
 
                         <TextView
                             android:id="@+id/titleTxt"
@@ -136,9 +141,9 @@
                                 android:id="@+id/ratingTxt"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
                                 android:layout_weight="1"
                                 android:text="0"
-                                android:layout_gravity="center_vertical"
                                 android:textSize="16sp" />
                         </LinearLayout>
 
@@ -311,7 +316,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="75dp"
-        android:background="@color/lightGray"
+        android:background="@color/white"
+        android:layout_marginBottom="30dp"
         app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -349,7 +355,6 @@
             android:layout_height="wrap_content"
             android:text="/Турист"
             android:textColor="@color/darkBlue"
-
             app:layout_constraintBottom_toBottomOf="@+id/priceTxt"
             app:layout_constraintStart_toEndOf="@+id/priceTxt"
             app:layout_constraintTop_toTopOf="@+id/priceTxt" />
