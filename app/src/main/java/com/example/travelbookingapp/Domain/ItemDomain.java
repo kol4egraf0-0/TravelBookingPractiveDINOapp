@@ -10,15 +10,39 @@ public class ItemDomain implements Serializable {
     private String duration;
     private String timeTour;
     private String dateTour;
-    private String tourGidName;
-    private String tourGidNumber;
-    private String tourGidPic;
+    private String tourGuideName;
+    private String tourGuideNumber;
+    private String tourGuidePic;
     private int price;
     private int bed;
     private String distance;
     private double score;
     public ItemDomain() {
 
+    }
+
+    public String getTourGuideName() {
+        return tourGuideName;
+    }
+
+    public void setTourGuideName(String tourGuideName) {
+        this.tourGuideName = tourGuideName;
+    }
+
+    public String getTourGuideNumber() {
+        return tourGuideNumber;
+    }
+
+    public void setTourGuideNumber(String tourGuideNumber) {
+        this.tourGuideNumber = tourGuideNumber;
+    }
+
+    public String getTourGuidePic() {
+        return tourGuidePic;
+    }
+
+    public void setTourGuidePic(String tourGuidePic) {
+        this.tourGuidePic = tourGuidePic;
     }
 
     public String getTitle() {
@@ -77,29 +101,6 @@ public class ItemDomain implements Serializable {
         this.dateTour = dateTour;
     }
 
-    public String getTourGidName() {
-        return tourGidName;
-    }
-
-    public void setTourGidName(String tourGidName) {
-        this.tourGidName = tourGidName;
-    }
-
-    public String getTourGidNumber() {
-        return tourGidNumber;
-    }
-
-    public void setTourGidNumber(String tourGidNumber) {
-        this.tourGidNumber = tourGidNumber;
-    }
-
-    public String getTourGidPic() {
-        return tourGidPic;
-    }
-
-    public void setTourGidPic(String tourGidPic) {
-        this.tourGidPic = tourGidPic;
-    }
 
     public int getPrice() {
         return price;

@@ -36,7 +36,7 @@ public class TicketActivity extends BaseActivity {
                 .into(binding.pic);
 
         Glide.with(TicketActivity.this)
-                .load(object.getTourGidPic())
+                .load(object.getTourGuidePic())
                 .into(binding.profile);
 
         binding.backBtn.setOnClickListener(v -> {finish();});
@@ -44,17 +44,17 @@ public class TicketActivity extends BaseActivity {
         binding.durationTxt.setText(object.getDuration());
         binding.tourGuideTxt.setText(object.getDateTour());
         binding.timeTxt.setText(object.getTimeTour());
-        binding.tourGuideNameTxt.setText(object.getTourGidName());
+        binding.tourGuideNameTxt.setText(object.getTourGuideName());
 
         binding.callBtn.setOnClickListener(v -> {
             Intent sendIntent = new Intent(Intent.ACTION_VIEW);
-            sendIntent.setData(Uri.parse("sms+"+object.getTourGidNumber()));
+            sendIntent.setData(Uri.parse("sms+"+object.getTourGuideNumber()));
             sendIntent.putExtra("sms body", "type your message");
             startActivity(sendIntent);
         });
 
         binding.messageBtn.setOnClickListener(v -> {
-            String phone = object.getTourGidNumber();
+            String phone = object.getTourGuideNumber();
             Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
             startActivity(intent);
         });
