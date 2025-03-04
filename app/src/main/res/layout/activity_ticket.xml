@@ -31,7 +31,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
-                    android:id="@+id/imageView2"
+                    android:id="@+id/backBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
@@ -49,20 +49,20 @@
                     android:textColor="@color/white"
                     android:textStyle="bold"
 
-                    app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                    app:layout_constraintBottom_toBottomOf="@+id/backBtn"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/imageView2" />
+                    app:layout_constraintTop_toTopOf="@+id/backBtn" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="500dp"
-                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
                     android:layout_margin="24dp"
                     android:background="@drawable/white_background"
+                    android:orientation="vertical"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView2">
+                    app:layout_constraintTop_toBottomOf="@+id/backBtn">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -82,12 +82,12 @@
                         <TextView
                             android:id="@+id/textView10"
                             android:layout_width="110dp"
-                            android:textAlignment="center"
                             android:layout_height="35dp"
                             android:background="@drawable/light_blue_background"
+                            android:text="Предстоящая поездка"
+                            android:textAlignment="center"
                             android:textColor="@color/blue"
                             android:textStyle="bold"
-                            android:text="Предстоящая поездка"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -95,33 +95,32 @@
                     <com.google.android.material.imageview.ShapeableImageView
                         android:id="@+id/pic"
                         android:layout_width="match_parent"
-                        app:shapeAppearanceOverlay="@style/ShapeImageView"
-                        android:scaleType="centerCrop"
                         android:layout_height="155dp"
                         android:layout_margin="16dp"
+                        android:scaleType="centerCrop"
+                        app:shapeAppearanceOverlay="@style/ShapeImageView"
                         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
                     <TextView
                         android:id="@+id/title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
                         android:text="title"
                         android:textColor="@color/darkBlue"
-                        android:layout_marginStart="16dp"
                         android:textSize="24sp"
-                        android:textStyle="bold"
-                        android:layout_marginEnd="16dp"
-                        />
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/textView14"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="12sp"
-                        android:textColor="@color/darkBlue"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="8dp"
-                        android:text="Покажи этот билет вашему гиду перед отправлением " />
+                        android:text="Покажи этот билет вашему гиду перед отправлением "
+                        android:textColor="@color/darkBlue"
+                        android:textSize="12sp" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -166,7 +165,7 @@
                             android:textColor="@color/darkBlue"
                             android:textStyle="bold"
                             app:layout_constraintStart_toStartOf="@+id/textView18"
-                            app:layout_constraintTop_toTopOf="@+id/tourGuideTxt" />
+                            app:layout_constraintTop_toTopOf="@+id/tourGuideNameTxt" />
 
                         <TextView
                             android:id="@+id/textView20"
@@ -175,8 +174,8 @@
                             android:layout_marginTop="16dp"
                             android:text="Прод. путевки"
                             android:textColor="@color/darkBlue"
-                            app:layout_constraintStart_toStartOf="@+id/tourGuideTxt"
-                            app:layout_constraintTop_toBottomOf="@+id/tourGuideTxt" />
+                            app:layout_constraintStart_toStartOf="@+id/tourGuideNameTxt"
+                            app:layout_constraintTop_toBottomOf="@+id/tourGuideNameTxt" />
 
                         <TextView
                             android:id="@+id/durationTxt"
@@ -213,7 +212,7 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:background="@drawable/stroke_ticket_background"
                         android:padding="12dp">
 
@@ -238,7 +237,7 @@
                             app:layout_constraintTop_toTopOf="@+id/profile" />
 
                         <TextView
-                            android:id="@+id/tourGuideTxt"
+                            android:id="@+id/tourGuideNameTxt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
@@ -269,8 +268,35 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:srcCompat="@drawable/message" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:srcCompat="@drawable/dash_line" />
+
+                    <ImageView
+                        android:id="@+id/imageView10"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_centerInParent="true"
+                        tools:srcCompat="@tools:sample/backgrounds/scenic" />
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/blue_bg_search"
+                android:layout_margin="24dp"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                style="@style/Widget.AppCompat.Button"
+                android:text="Скачать билет" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
