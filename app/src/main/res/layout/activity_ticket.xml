@@ -102,7 +102,7 @@
                         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
                     <TextView
-                        android:id="@+id/title"
+                        android:id="@+id/titleTxt"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
@@ -165,7 +165,7 @@
                             android:textColor="@color/darkBlue"
                             android:textStyle="bold"
                             app:layout_constraintStart_toStartOf="@+id/textView18"
-                            app:layout_constraintTop_toTopOf="@+id/tourGuideNameTxt" />
+                            app:layout_constraintTop_toTopOf="@+id/tourGuideTxt" />
 
                         <TextView
                             android:id="@+id/textView20"
@@ -174,8 +174,8 @@
                             android:layout_marginTop="16dp"
                             android:text="Прод. путевки"
                             android:textColor="@color/darkBlue"
-                            app:layout_constraintStart_toStartOf="@+id/tourGuideNameTxt"
-                            app:layout_constraintTop_toBottomOf="@+id/tourGuideNameTxt" />
+                            app:layout_constraintStart_toStartOf="@+id/tourGuideTxt"
+                            app:layout_constraintTop_toBottomOf="@+id/tourGuideTxt" />
 
                         <TextView
                             android:id="@+id/durationTxt"

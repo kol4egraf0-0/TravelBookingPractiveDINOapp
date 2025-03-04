@@ -47,6 +47,9 @@ public class DetailActivity extends BaseActivity {
                 .into(binding.pic);
 
         binding.addToCartBtn.setOnClickListener(v -> {
+            Intent intent =  new Intent(DetailActivity.this, TicketActivity.class);
+            intent.putExtra("object", object);
+            startActivity(intent);
         });
     }
 
