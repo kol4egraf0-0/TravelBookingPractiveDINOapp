@@ -62,5 +62,12 @@ public class TicketActivity extends BaseActivity {
     }
     private void getIntentExtra() {
         object = (ItemDomain) getIntent().getSerializableExtra("object");
+
+        String qrUriString = getIntent().getStringExtra("qrUri");
+        if (qrUriString != null) {
+            Uri qrUri = Uri.parse(qrUriString);
+            binding.qrPic.setImageURI(qrUri);
+        }
+
     }
 }
