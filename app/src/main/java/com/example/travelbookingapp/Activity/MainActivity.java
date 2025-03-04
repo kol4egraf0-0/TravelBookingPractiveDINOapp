@@ -14,12 +14,14 @@ import com.example.travelbookingapp.Adapter.PopularAdapter;
 import com.example.travelbookingapp.Adapter.RecommendedAdapter;
 import com.example.travelbookingapp.Domain.ItemDomain;
 import com.example.travelbookingapp.Domain.Location;
+import com.example.travelbookingapp.Helper.BottomNavHelper;
 import com.example.travelbookingapp.R;
 import com.example.travelbookingapp.databinding.ActivityMainBinding;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
+import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +29,7 @@ import java.util.List;
 
 public class MainActivity extends BaseActivity {
     ActivityMainBinding binding;
+    ChipNavigationBar bottomNavigation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +40,9 @@ public class MainActivity extends BaseActivity {
         initLocation();
         initRec();
         initPopular();
+
+        bottomNavigation = findViewById(R.id.chipNav);
+        BottomNavHelper.setupBottomNav(this, bottomNavigation);
     }
 
     private void initPopular() {
