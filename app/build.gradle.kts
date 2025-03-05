@@ -42,6 +42,7 @@ dependencies {
     implementation(libs.activity)
     implementation(libs.constraintlayout)
     implementation(libs.firebase.database)
+    implementation(libs.firebase.auth)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
@@ -53,4 +54,6 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.12.0")
 
     implementation("com.journeyapps:zxing-android-embedded:4.3.0")
+
+    implementation ("com.google.firebase:firebase-auth:22.1.2")
 }
