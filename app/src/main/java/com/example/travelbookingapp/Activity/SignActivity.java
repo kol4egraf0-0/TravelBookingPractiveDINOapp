@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.travelbookingapp.databinding.ActivitySignBinding;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class SignActivity extends BaseActivity {
+public class SignActivity extends AppCompatActivity {
     ActivitySignBinding binding;
     private FirebaseAuth auth;
 
